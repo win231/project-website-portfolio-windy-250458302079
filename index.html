@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>portofolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="shortcut icon"
+      href="https://i.pinimg.com/736x/32/5c/ff/325cff33a4ed1d703fe740f796ee33ed.jpg"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
+  </head>
+  <style>
+    .font-cute {
+      font-family: "Nunito", sans-serif;
+    }
+    .text-brown {
+      color: #675d50;
+    }
+
+    .bg-crem {
+      color: #f3deba;
+    }
+  </style>
+
+  <body>
+    <!-- aria-lebel itu nunjukin kalo web kita itu profesional,
+      dan supaya bisa dipahami oleh screen reader buat bantu orang disabilitas tetep bisa baca web kita-->
+    <nav
+      class="sticky top-0 z-50 bg-[#A9907E]/90 backdrop:blur border-b border-[#F3DEBA]"
+      aria-label="primary"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- untuk menu laptop -->
+        <div class="flex items-center justify-between h-16">
+          <a
+            href="#"
+            class="flex items-center text-white text-xl font-cute uppercase tracking-wider font-bold"
+            >winnie.</a
+          >
+
+          <button
+            id="hamburger"
+            class="md:hidden mt-4 px-2 py-2 mb-4 rounded hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-0"
+            aria-expanded="false"
+            aria-controls="main-menu"
+            aria-label="Toggle menu"
+          >
+            <!-- Icon open -->
+            <svg
+              id="icon-open"
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+
+            <!-- Icon close -->
+            <svg
+              id="icon-close"
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 hidden"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+
+          <div id="main-menu" class="hidden md:flex md:items-center md:gap-2">
+            <div
+              class="flex flex-col md:flex-row md:items-center md:gap-2 text-right md:text-left"
+            >
+              <a
+                href="#aboutMe"
+                class="px-3 py-2 text-white hover:text-amber-300 uppercase font-cute font-bold"
+                >About Me</a
+              >
+              <a
+                href="#whatIdo"
+                class="px-3 py-2 text-white hover:text-amber-300 uppercase font-cute font-bold"
+                >What i do</a
+              >
+              <a
+                href="#portofolio"
+                class="px-3 py-2 text-white hover:text-amber-300 uppercase font-cute font-bold"
+                >Portofolio</a
+              >
+              <a
+                href="#mySkill"
+                class="px-3 py-2 text-white hover:text-amber-300 uppercase font-cute font-bold"
+                >Skills</a
+              >
+              <a
+                href="#testimoni"
+                class="px-3 py-2 text-white hover:text-amber-300 uppercase font-cute font-bold"
+                >Testimoni</a
+              >
+              <a
+                href="#contactMe"
+                class="bg-emerald-600 hover:bg-emerald-300 rounded-xl px-4 py-2 font-cute font-bold text-white"
+                >Contact me</a
+              >
+            </div>
+          </div>
+
+          <!-- menu untuk hp -->
+          <div
+            id="mobile-panel"
+            class="md:hidden hidden border-t border-blue-800 py-2"
+          >
+            <a
+              href="#aboutMe"
+              class="block px-3 py-2 text-white hover:text-amber-300 uppercase font-cute"
+              >About me</a
+            >
+            <a
+              href="#whatIdo"
+              class="block px-3 py-2 text-white hover:text-amber-300 uppercase font-cute"
+              >What i do</a
+            >
+            <a
+              href="#portofolio"
+              class="block px-3 py-2 text-white hover:text-amber-300 uppercase font-cute"
+              >Portofolio</a
+            >
+            <a
+              href="#mySkill"
+              class="block px-3 py-2 text-white hover:text-amber-300 uppercase font-cute"
+              >Skills</a
+            >
+            <a
+              href="#testimoni"
+              class="block px-3 py-2 text-white hover:text-amber-300 uppercase font-cute"
+              >Testimoni</a
+            >
+            <a
+              href="#contactMe"
+              class="block bg-emerald-600 hover:bg-emerald-300 rounded-xl px-4 py-2 font-cute font-bold text-white"
+              >Contact me"></a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- about me -->
+    <section id="aboutMe" class="bg-[#F3DEBA]">
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid md:grid-cols-2 gap-10 items-center"
+      >
+        <div
+          class="order-2 border-[12px] sm:border-[16px] border-[#ABC4AA] rounded-2xl shadow-2xl overflow-auto"
+        >
+          <img
+            src="https://i.pinimg.com/736x/0b/d5/ea/0bd5ea79ddd1b379e7a5f027876a21b3.jpg"
+            class="w-full h-full object-cover"
+          />
+        </div>
+
+        <div class="order-1 lg:order-1">
+          <!-- leading = jarak antar baris
+           tracking = jarak antar huruf -->
+          <h1 class="font-cute text-3xl font-bold leading-tight text-[#A9907E]">
+            Hello, I'm <span>Windy</span>
+          </h1>
+          <h2 class="font-cute text-3xl font-semibold leading-tight text-white">
+            Web / Mobile Developer
+          </h2>
+          <p class="mt-5 leading-relaxed text-white font-cute text-xl">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa
+            cumque rem unde fugit voluptatibus minus labore aliquid, quia illo,
+            deserunt corporis laudantium quaerat sapiente animi omnis tempore
+            enim accusantium recusandae.
+          </p>
+
+          <!-- tailwind itu defaultnya no wrap, jadi kalo di flex-row dia bakal numpuk kesamping
+           nah biar ga numpuk bisa kita pakein flex-wrap biar kalo kepenuhan itemnya bakal ke bawah -->
+          <div class="mt-6 flex flex-wrap items-center gap-4">
+            <a
+              href=""
+              class="inline-flex items-center justify-center rounded-lg bg-[#675D50] hover:bg-[#ABC4AA] text-white px-4 py-3 text-2xl"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+            <a
+              href=""
+              class="inline-flex items-center justify-center rounded-lg bg-[#675D50] hover:bg-[#ABC4AA] text-white px-4 py-3 text-2xl"
+              ><i class="fa-brands fa-behance"></i
+            ></a>
+            <a
+              href=""
+              class="inline-flex items-center justify-center rounded-lg bg-[#675D50] hover:bg-[#ABC4AA] text-white px-4 py-3 text-2xl"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+            <a
+              href=""
+              class="inline-flex items-center justify-center rounded-lg bg-[#675D50] hover:bg-[#ABC4AA] text-white px-4 py-3 text-2xl"
+              ><i class="fa-brands fa-twitter"></i
+            ></a>
+            <a
+              href=""
+              class="inline-flex items-center justify-center rounded-lg bg-[#675D50] hover:bg-[#ABC4AA] text-white px-4 py-3 text-2xl"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- what i do -->
+    <section id="whatIdo" class="bg-[#ABC4AA]">
+      <div
+        class="max-w-7xl mx-auto px-4 md:px-8 py-20 border-t border-[#F3DEBA]"
+      >
+        <div class="text-center mb-12">
+          <h2
+            class="text-3xl font-bold font-cute text-white underline underline-offset-8 decoration-emerald-500 decoration-4 uppercase tracking-widest"
+          >
+            What I Do
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="rounded-xl bg-[#F3DEBA]/70 shadow-2xl p-6">
+            <div class="flex items-center gap-3 mb-3">
+              <div
+                class="w-10 h-10 grid rounded-full bg-[#A9907E] text-white place-items-center"
+              >
+                <i class="fa-solid fa-desktop"></i>
+              </div>
+              <h3 class="text-white font-cute font-bold text-lg tracking-wider">
+                Web Design
+              </h3>
+            </div>
+            <p class="text-white font-cute">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
+              laborum cum ipsa reiciendis asperiores, adipisci assumenda
+              nesciunt labore quod repellat quisquam a eligendi molestias
+              dignissimos ipsum expedita sint totam ut.
+            </p>
+          </div>
+          <div class="rounded-xl bg-[#F3DEBA]/70 shadow-2xl p-6">
+            <div class="flex items-center gap-3 mb-3">
+              <div
+                class="w-10 h-10 grid rounded-full bg-[#A9907E] text-white place-items-center"
+              >
+                <i class="fa-solid fa-mobile-screen"></i>
+              </div>
+              <h3 class="text-white font-cute font-bold text-lg tracking-wider">
+                App Design
+              </h3>
+            </div>
+            <p class="text-white font-cute">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
+              laborum cum ipsa reiciendis asperiores, adipisci assumenda
+              nesciunt labore quod repellat quisquam a eligendi molestias
+              dignissimos ipsum expedita sint totam ut.
+            </p>
+          </div>
+          <div class="rounded-xl bg-[#F3DEBA]/70 shadow-2xl p-6">
+            <div class="flex items-center gap-3 mb-3">
+              <div
+                class="w-10 h-10 grid rounded-full bg-[#A9907E] text-white place-items-center"
+              >
+                <i class="fa-solid fa-earth-asia"></i>
+              </div>
+              <h3 class="text-white font-cute font-bold text-lg tracking-wider">
+                Brending
+              </h3>
+            </div>
+            <p class="text-white font-cute">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
+              laborum cum ipsa reiciendis asperiores, adipisci assumenda
+              nesciunt labore quod repellat quisquam a eligendi molestias
+              dignissimos ipsum expedita sint totam ut.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- portofolio -->
+    <section id="portofolio" class="bg-[#F3DEBA]">
+      <div
+        class="max-w-7xl mx-auto px-4 md:px-8 py-20 border-t border-[#F3DEBA]"
+      >
+        <div class="text-center mb-12">
+          <h2
+            class="text-3xl font-bold font-cute text-white underline underline-offset-8 decoration-emerald-500 decoration-4 uppercase tracking-widest"
+          >
+            Portofolio
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="rounded-xl bg-[#ABC4AA]/70 shadow-2xl p-6">
+            <div class="flex-row items-center text-center gap-3 mb-3">
+              <a href="https://id.pinterest.com/pin/1266706137621281/">
+                <img
+                  src="https://surabaya.proxsisgroup.com/wp-content/uploads/2018/03/web-design.jpg"
+                  alt=""
+                  class="object-cover w-full"
+                />
+                <br />
+                <h3
+                  class="text-white font-cute font-bold text-lg tracking-wider pb-2"
+                >
+                  App Design
+                </h3>
+                <p class="text-white font-cute">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
+                  laborum cum ipsa reiciendis asperiores, adipisci assumenda
+                  nesciunt labore quod repellat quisquam a eligendi molestias
+                  dignissimos ipsum expedita sint totam ut.
+                </p>
+              </a>
+            </div>
+          </div>
+
+          <div class="rounded-xl bg-[#ABC4AA]/70 shadow-2xl p-6">
+            <div class="flex-row items-center text-center gap-3 mb-3">
+              <a href="https://id.pinterest.com/pin/1266706137621281/">
+                <img
+                  src="https://yukcoding.id/wp-content/uploads/2022/03/web-development.jpeg"
+                  alt=""
+                  class="object-cover w-full h-56"
+                />
+                <br />
+                <h3
+                  class="text-white font-cute font-bold text-lg tracking-wider pb-2"
+                >
+                  App Design
+                </h3>
+                <p class="text-white font-cute">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
+                  laborum cum ipsa reiciendis asperiores, adipisci assumenda
+                  nesciunt labore quod repellat quisquam a eligendi molestias
+                  dignissimos ipsum expedita sint totam ut.
+                </p>
+              </a>
+            </div>
+          </div>
+          <div class="rounded-xl bg-[#ABC4AA]/70 shadow-2xl p-6">
+            <div class="flex-row items-center text-center gap-3 mb-3">
+              <a href="https://id.pinterest.com/pin/1266706137621281/">
+                <img
+                  src="https://indonesiaimaji.com/wp-content/uploads/2018/02/Branding-101.jpg"
+                  alt=""
+                  class="object-cover w-full h-56"
+                />
+                <br />
+                <h3
+                  class="text-white font-cute font-bold text-lg tracking-wider pb-2"
+                >
+                  App Design
+                </h3>
+                <p class="text-white font-cute">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
+                  laborum cum ipsa reiciendis asperiores, adipisci assumenda
+                  nesciunt labore quod repellat quisquam a eligendi molestias
+                  dignissimos ipsum expedita sint totam ut.
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- My Skills -->
+    <section id="mySkill" class="bg-[#ABC4AA] scroll-mt-24">
+      <div
+        class="max-w-6xl mx-auto px-2 md:px-2 py-6 border-t border-[#F3DEBA]"
+      >
+        <!-- Judul -->
+        <div class="text-center mb-12">
+          <h2
+            class="text-3xl font-bold font-cute text-white underline underline-offset-8 decoration-emerald-500 decoration-4 uppercase tracking-widest"
+          >
+            My Skills
+          </h2>
+        </div>
+        <div class="text-left mb-8">
+          <h3 class="text-xl font-semibold font-serif text-white">
+            Web Developer
+          </h3>
+          <p class="text-white font-serif">
+            Saya Memiliki Skill Seperti Berikut :
+          </p>
+        </div>
+
+        <!-- Grid Skills -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <!-- Card Skills 1 -->
+          <div
+            class="flex items-center justify-center bg-[#F3DEBA] rounded-lg py-6"
+          >
+            <img
+              src="/img/ai.png"
+              alt="Adobe Ilustrator"
+              class="w-12 h-12 mr-2"
+            />
+          </div>
+          <!-- Card Skills 2 -->
+          <div
+            class="flex items-center justify-center bg-[#F3DEBA] rounded-lg py-6"
+          >
+            <img
+              src="/img/ps.png"
+              alt="Adobe Photoshop"
+              class="w-12 h-12 mr-2"
+            />
+          </div>
+          <!-- Card Skills 3 -->
+          <div
+            class="flex items-center justify-center bg-[#F3DEBA] rounded-lg py-6"
+          >
+            <img src="/img/html.png" alt="HTML" class="w-12 h-12 mr-2" />
+          </div>
+          <!-- Card Skills 4 -->
+          <div
+            class="flex items-center justify-center bg-[#F3DEBA] rounded-lg py-6"
+          >
+            <img src="/img/js.png" alt="JavaScript" class="w-12 h-12 mr-2" />
+          </div>
+          <!-- Card Skills 5 -->
+          <div
+            class="flex items-center justify-center bg-[#F3DEBA] rounded-lg py-6"
+          >
+            <img src="/img/xd.png" alt="Adobe XD" class="w-12 h-12 mr-2" />
+          </div>
+          <!-- Card Skills 6 -->
+          <div
+            class="flex items-center justify-center bg-[#F3DEBA] rounded-lg py-6"
+          >
+            <img src="/img/Blender.png" alt="Blender" class="w-12 h-12 mr-2" />
+          </div>
+          <!-- Card Skills 7 -->
+          <div
+            class="flex items-center justify-center bg-[#F3DEBA] rounded-lg py-6"
+          >
+            <img src="/img/sketch.png" alt="Sketch" class="w-12 h-12 mr-2" />
+          </div>
+          <!-- Card Skills 8 -->
+          <div
+            class="flex items-center justify-center bg-[#F3DEBA] rounded-lg py-6"
+          >
+            <img src="/img/figma.png" alt="Figma" class="w-12 h-12 mr-2" />
+          </div>
+        </div>
+      </div>
+          
+    </section>
+
+    <!-- testimoni -->
+    <section id="testimoni" class="bg-[#F3DEBA]">
+      <div
+        class="max-w-7xl mx-auto px-4 md:px-8 py-20 border-t border-[#F3DEBA]"
+      >
+        <div class="max-w-7xl mx-auto px-2 md:px-6 py-16 grid bg-[#A9907E]">
+          <div class="text-center mb-12">
+            <h2
+              class="text-3xl font-bold font-cute text-white underline underline-offset-8 decoration-emerald-500 decoration-4 uppercase tracking-widest"
+            >
+              Testimoni
+            </h2>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-6">
+            <div class="rounded-xl bg-[#ABC4AA]/70 shadow-2xl p-6 flex justify-center text-white">
+              <div>
+                <span>Aug</span>
+                <hr class="my-2">
+                <p class="text-center">24</p>
+              </div>
+              <div class="flex-row items-center gap-3 mb-3 text-left pl-4">
+                <span class="text-amber-300 font-cute font-semibold">JANE DOE</span>
+                  <h3
+                    class="text-white font-cute font-bold text-lg tracking-wider pb-2"
+                  >
+                    Review Jasa Website
+                  </h3>
+                  <p class="text-white font-cute">
+                    Jasanya bagus,good job dan cepat...
+                  </p>
+                  
+                  <a href="#" class="text-amber-300 font-bold hover:text-emerald-300">Read More</a>
+              </div>
+            </div>
+            <div class="rounded-xl bg-[#ABC4AA]/70 shadow-2xl p-6 flex justify-center text-white">
+              <div>
+                <span>Aug</span>
+                <hr class="my-2">
+                <p class="text-center">24</p>
+              </div>
+              <div class="flex-row items-center gap-3 mb-3 text-left pl-4">
+                <span class="text-amber-300 font-cute font-semibold">JANE DOE</span>
+                  <h3
+                    class="text-white font-cute font-bold text-lg tracking-wider pb-2"
+                  >
+                    Review Jasa Website
+                  </h3>
+                  <p class="text-white font-cute">
+                    Jasanya bagus,good job dan cepat...
+                  </p>
+                  
+                  <a href="#" class="text-amber-300 font-bold hover:text-emerald-300">Read More</a>
+              </div>
+            </div>
+            <div class="rounded-xl bg-[#ABC4AA]/70 shadow-2xl p-6 flex justify-center text-white">
+              <div>
+                <span>Aug</span>
+                <hr class="my-2">
+                <p class="text-center">24</p>
+              </div>
+              <div class="flex-row items-center gap-3 mb-3 text-left pl-4">
+                <span class="text-amber-300 font-cute font-semibold">JANE DOE</span>
+                  <h3
+                    class="text-white font-cute font-bold text-lg tracking-wider pb-2"
+                  >
+                    Review Jasa Website
+                  </h3>
+                  <p class="text-white font-cute">
+                    Jasanya bagus,good job dan cepat...
+                  </p>
+                  
+                  <a href="#" class="text-amber-300 font-bold hover:text-emerald-300">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact me -->
+    <section
+      id="contactMe"
+      class="bg-[#A9907E] text-white py-20 border-t border-[#F3DEBA]"
+    >
+      <div class="max-w-xl mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2
+            class="text-3xl font-bold font-cute text-white underline underline-offset-8 decoration-emerald-500 decoration-4 uppercase tracking-wider"
+          >
+            Contact Me
+          </h2>
+          <p class="mt-2 text-white uppercase">
+            Hubungi kami jika ingin bekerja sama
+          </p>
+        </div>
+
+        <form
+          action=""
+          class="bg-[#F3DEBA]/70 p-6 rounded-lg shadow-lg space-y-6"
+        >
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label
+                for="email"
+                class="block text-sm font-semibold text-white uppercase mb-2 font-cute"
+                >name</label
+              >
+              <input
+                type="text"
+                placeholder=""
+                class="w-full px-4 py-2 bg-[#F3DEBA] text-white rounded border border-[#ABC4AA]"
+              />
+            </div>
+
+            <div>
+              <label
+                for="email"
+                class="block text-sm font-semibold text-white uppercase mb-2 font-cute"
+                >email</label
+              >
+              <input
+                type="text"
+                placeholder=""
+                class="w-full px-4 py-2 bg-[#F3DEBA] text-white rounded border border-[#ABC4AA]"
+              />
+            </div>
+
+            <div class="w-full col-span-2">
+              <label
+                for="message"
+                class="block text-sm font-semibold text-white uppercase mb-2 font-cute"
+                >Message</label
+              >
+              <textarea placeholder="" rows="5" id="" class="px-4 py-2 bg-[#F3DEBA] text-white rounded border border-[#ABC4AA] w-full"></textarea>
+            </div>
+          </div>
+          <button
+            class="bg-[#ABC4AA] hover:bg-emerald-300 rounded-xl px-4 py-2 font-cute font-bold text-white"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="bg-[#ABC4AA] text-center py-16 text-white font-cute">
+      <div class="flex flex-2 gap-6 px-10">
+        <img src="/img/maps.png" alt="pledis-ent" class="w-1/3 rounded-2xl">
+        <p class="font-semibold font-cute">42 Hangang-daero, Yongsan District, Seoul, Korea Selatan</p>
+      </div>
+      <br>
+      Copyright &copy; 2025 - All Rights Reserved Winnie
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      const reduceMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
+      AOS.init({
+        duration: reduceMotion ? 0 : 600,
+        once: true,
+      });
+
+      const btn = document.getElementById("hamburger");
+      const iconOpen = document.getElementById("icon-open");
+      const iconClose = document.getElementById("icon-close");
+      const menu = document.getElementById("main-menu");
+      const panel = document.getElementById("mobile-panel");
+
+      btn?.addEventListener("click", () => {
+        const expanded = btn.getAttribute("aria-expanded") === "true";
+        btn.setAttribute("aria-expanded", String(!expanded));
+        iconOpen.classList.toggle("hidden");
+        iconClose.classList.toggle("hidden");
+        panel.classList.toggle("hidden");
+      });
+
+      panel?.querySelectorAll("a").forEach((a) => {
+        a.addEventListener("click", () => {
+          btn.setAttribute("aria-expanded", "false");
+          iconOpen.classList.remove("hidden");
+          iconClose.classList.add("hidden");
+          panel.classList.add("hidden");
+        });
+      });
+    </script>
+  </body>
+</html>

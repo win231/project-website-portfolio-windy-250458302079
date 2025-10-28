@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>materi tailwind</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <div class="bg-violet-400 block">kotak 1 (blok)</div>
+    <div class="bg-violet-700 block">kotak 2 (blok)</div>
+    <!-- display block pasti ke bawah. block itu nambahin item kebawah dengan full width -->
+    
+    <br>
+
+    <span class="bg-amber-300">kotak 1 (inline)</span>
+    <span class="bg-amber-500">kotak 2 (inline)</span>
+    <!-- inline buat nambah item ke samping, dan ga bisa nambah height atapun width, 
+    karna inline itu bakalan ngikutin besar/banyaknya isi konten -->
+
+    <br> <br>
+
+        <span class="bg-green-300 inline-block w-24 h-12">kotak 1 (inline block)</span>
+    <span class="bg-green-500 inline-block w-24 h-12">kotak 2 (inline block)</span>
+    <!-- span = buat tulisan
+    div = pembungkus -->
+
+    <br> <br>
+
+    <!-- biasanya flex itu berdampingan (dipakai barengan) sama justify, gap, items 
+    justify = atur arah horizontal
+    gap = atur jarak antar item
+    items = atur arah vertikal
+    -->
+    <div class="flex gap-2 bg-pink-300 p-2">
+        <div class="bg-red-400 w-16 h-16">a</div>
+        <div class="bg-red-500 w-16 h-16">b</div>
+        <div class="bg-red-600 w-16 h-16">c</div>
+    </div>
+    <!-- flex itu secara default horizontal
+    tapi bisa jadi vertikal dengan ditambah, flex-col = vertikal -->
+</body>
+</html>
